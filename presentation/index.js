@@ -10,6 +10,7 @@ import {
 	ListItem,
 	List,
 	Quote,
+	Image,
 	Slide,
 	Text
 } from "spectacle";
@@ -18,6 +19,13 @@ import {
 import createTheme from "spectacle/lib/themes/default";
 
 import "normalize.css";
+
+import neuroBg from "../assets/brainb01.png";
+
+import ElmanNets from "./elman_nets";
+import DeepNets from "./deep_nets";
+import SpikingNets from "./spiking_nets";
+import GanNets from "./gan_nets";
 
 const theme = createTheme(
 	{
@@ -55,6 +63,7 @@ export default class Presentation extends React.Component {
 						Research (or not) about EEG and classification
 						algorithms
 					</Text>
+					<Image src={neuroBg} />
 				</Slide>
 				<Slide transition={["slide"]} bgColor="tertiary">
 					<Heading
@@ -67,21 +76,10 @@ export default class Presentation extends React.Component {
 						State of the art
 					</Heading>
 				</Slide>
-				<Slide>
-					<Heading size={3} caps textColor="secondary">
-						Classification of EEG with Recurrent Neural Networks
-					</Heading>
-				</Slide>
-				<Slide>
-					<Heading fit caps bold textColor="tertiary">
-						What they did?
-					</Heading>
-					<Text margin="40px 0 0 0" lineHeight={1}>
-						They tried to classify whether someone is viewing a 2D
-						or 3D image (DP3). With emphasis on Neural Networks
-						Classificators, particulary Recurrent Neural Networks.
-					</Text>
-				</Slide>
+				{ElmanNets}
+				{DeepNets}
+				{SpikingNets}
+				{GanNets}
 			</Deck>
 		);
 	}
