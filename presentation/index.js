@@ -26,6 +26,7 @@ import ElmanNets from "./elman_nets";
 import DeepNets from "./deep_nets";
 import SpikingNets from "./spiking_nets";
 import GanNets from "./gan_nets";
+import ChaoticNet from "./chaotic_nets";
 
 const theme = createTheme(
 	{
@@ -80,6 +81,7 @@ export default class Presentation extends React.Component {
 				{DeepNets}
 				{SpikingNets}
 				{GanNets}
+				{ChaoticNet}
 			</Deck>
 		);
 	}

@@ -24,7 +24,7 @@ const ElmanNets = [
 	<Slide>
 		<Heading size={5} caps textColor="secondary">
 			Deep Convolutional Neural Networks for Mental Load Classification
-			based on EEG Data.
+			based on EEG Data
 		</Heading>
 		<Image src={deepImage} />
 	</Slide>,
