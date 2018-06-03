@@ -1,0 +1,44 @@
+{
+	"papers": [
+		{
+			"title":
+				"Classification of mental task from EEG data using neural networks based on particle swarm optimization.",
+			"year": 2010,
+			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0925231208001859",
+			"description":
+				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'."
+		},
+		{
+			"title":
+				"Classification of mental task from EEG data using neural networks based on particle swarm optimization.",
+			"year": 2010,
+			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0925231208001859",
+			"description":
+				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'."
+		},
+		{
+			"title":
+				"Classification of mental task from EEG data using neural networks based on particle swarm optimization.",
+			"year": 2010,
+			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0925231208001859",
+			"description":
+				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'."
+		},
+		{
+			"title":
+				"Classification of mental task from EEG data using neural networks based on particle swarm optimization.",
+			"year": 2010,
+			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0925231208001859",
+			"description":
+				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'."
+		}
+	]
+}
