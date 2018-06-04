@@ -7,6 +7,7 @@ import Card from '../components/Card';
 import { Switch, Route } from 'react-router-dom';
 
 import SotaPage from './SotaPage';
+import OverviewPage from './OverviewPage';
 
 const MainContainer = styled.div`
 	${props => {
@@ -117,6 +118,7 @@ class MainPage extends Component {
 
 				<ContentContainer isMobile={this.state.isMobile}>
 					<Switch>
+						<Route path="/" exact component={OverviewPage} />
 						<Route path="/sota" component={SotaPage} />
 						<Route
 							path="/freeideas"
