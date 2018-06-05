@@ -13,13 +13,16 @@ const MainContainer = styled.div`
 		if (props.isMobile) {
 			return css`
 				width: 100vw;
+				height: 100%;
+				max-height: 100vh;
 			`;
 		} else {
 			return css`
 				display: grid;
 				grid-template-columns: 90px 100%;
 				grid-template-rows: 90px 100%;
-				width: calc(100vw - 80px);
+				width: calc(100vw - 90px);
+				max-height: 100vh;
 			`;
 		}
 	}};
@@ -37,6 +40,9 @@ const ContentContainer = styled.div`
 				grid-column-start: 2;
 				margin-left: 30px;
 				overflow-x: scroll;
+				overflow-y: scroll;
+				margin-top: 15px;
+				max-height: calc(100vh - 105px);
 			`;
 		}
 	}};
@@ -100,8 +106,6 @@ class MainPage extends Component {
 		window.addEventListener('resize', this.handleWindowSizeChange);
 	}
 
-	// make sure to remove the listener
-	// when the component is not mounted anymore
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.handleWindowSizeChange);
 	}

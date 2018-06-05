@@ -28,14 +28,14 @@ const Container = styled.div`
 				width: 100vw;
 				display: flex;
 				justify-content: space-between;
-				box-shadow: 0 -5px 19px 0 rgba(79, 79, 79, 0.25);
+				box-shadow: 0 -3px 15px 0 rgba(79, 79, 79, 0.15);
 			`;
 		} else {
 			return css`
 				grid-row-start: 1;
 				grid-row-end: 2;
 				height: 100vh;
-				box-shadow: 5px 0 19px 0 rgba(79, 79, 79, 0.25);
+				box-shadow: 3px 0 15px 0 rgba(79, 79, 79, 0.15);
 			`;
 		}
 	}};

@@ -21,10 +21,12 @@ const Content = styled.div`
 	}};
 `;
 
+const widthMinMobile = 500;
+
 class StateOfTheArt extends Component {
 	state = {
 		width: window.innerWidth,
-		isMobile: window.innerWidth < 500,
+		isMobile: window.innerWidth < widthMinMobile,
 		papers: papers.papers,
 		loading: true
 	};
@@ -45,7 +47,7 @@ class StateOfTheArt extends Component {
 				this.setState(prevState => {
 					return { ...prevState, loading: false };
 				}),
-			100
+			2000
 		);
 	}
 
@@ -54,7 +56,7 @@ class StateOfTheArt extends Component {
 			return {
 				...prevState,
 				width: window.innerWidth,
-				isMobile: window.innerWidth < 500
+				isMobile: window.innerWidth < widthMinMobile
 			};
 		});
 	};
