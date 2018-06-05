@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
 import SideBar from '../components/Sidebar';
-import Card from '../components/Card';
 
 import { Switch, Route } from 'react-router-dom';
 
@@ -79,12 +78,23 @@ const NeuroTitle = styled.div`
 	}};
 `;
 
+const pages = {
+	'/': 'About it',
+	'/sota': 'State of the art',
+	'/freeideas': 'Free Ideas for the future',
+	'/datasets': 'Datasets',
+	'/gan': 'Generative Adversial Networks'
+};
+
 class MainPage extends Component {
-	state = {
-		width: window.innerWidth,
-		isMobile: window.innerWidth < 500,
-		currentPage: 'State of the art'
-	};
+	constructor(props, context) {
+		super(props, context);
+		this.state = {
+			width: window.innerWidth,
+			isMobile: window.innerWidth < 500,
+			currentPage: 'State of the art'
+		};
+	}
 
 	componentWillMount() {
 		window.addEventListener('resize', this.handleWindowSizeChange);
@@ -108,7 +118,7 @@ class MainPage extends Component {
 
 	render() {
 		const currentLocation = this.props.location.pathname;
-		console.log(currentLocation);
+
 		return (
 			<MainContainer isMobile={this.state.isMobile}>
 				<SideBar
@@ -118,7 +128,7 @@ class MainPage extends Component {
 
 				<NeuroTitle isMobile={this.state.isMobile}>
 					Neuro Research
-					<ContentTitle>{this.state.currentPage}</ContentTitle>
+					<ContentTitle>{pages[currentLocation]}</ContentTitle>
 				</NeuroTitle>
 
 				<ContentContainer isMobile={this.state.isMobile}>

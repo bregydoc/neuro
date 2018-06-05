@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import MainPage from './pages/MainPage';
 
@@ -17,8 +17,6 @@ class App extends React.Component {
 		);
 	}
 }
-
-export default App;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

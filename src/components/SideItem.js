@@ -65,7 +65,18 @@ const Icon = styled.img`
 	left: 50%;
 	transform: translateX(-50%); */
 	width: auto;
-	height: 30px;
+
+	${props => {
+		if (props.isMobile) {
+			return css`
+				height: 24px;
+			`;
+		} else {
+			return css`
+				height: 30px;
+			`;
+		}
+	}};
 `;
 
 class SideItem extends Component {
@@ -78,9 +89,15 @@ class SideItem extends Component {
 			>
 				<Wrapper isMobile={this.props.isMobile}>
 					{this.props.active ? (
-						<Icon src={this.props.activeIcon} />
+						<Icon
+							isMobile={this.props.isMobile}
+							src={this.props.activeIcon}
+						/>
 					) : (
-						<Icon src={this.props.normalIcon} />
+						<Icon
+							isMobile={this.props.isMobile}
+							src={this.props.normalIcon}
+						/>
 					)}
 
 					<Title active={this.props.active}>{this.props.title}</Title>

@@ -4,9 +4,11 @@ import styled, { css } from 'styled-components';
 import Card from '../components/Card';
 
 import papers from '../data/papers.json';
+import Loading from '../components/Loading';
 
 const Content = styled.div`
 	display: flex;
+	margin-top: 20px;
 
 	${props => {
 		if (props.isMobile) {
@@ -17,17 +19,14 @@ const Content = styled.div`
 			return css``;
 		}
 	}};
-	/* width: 100%; */
-
-	/* overflow-x: scroll; */
-	/* overflow-: scroll; */
 `;
 
 class StateOfTheArt extends Component {
 	state = {
 		width: window.innerWidth,
 		isMobile: window.innerWidth < 500,
-		papers: papers.papers
+		papers: papers.papers,
+		loading: true
 	};
 
 	componentWillMount() {
@@ -38,6 +37,16 @@ class StateOfTheArt extends Component {
 	// when the component is not mounted anymore
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.handleWindowSizeChange);
+	}
+
+	componentDidMount() {
+		setTimeout(
+			() =>
+				this.setState(prevState => {
+					return { ...prevState, loading: false };
+				}),
+			100
+		);
 	}
 
 	handleWindowSizeChange = () => {
@@ -51,7 +60,9 @@ class StateOfTheArt extends Component {
 	};
 
 	render() {
-		return (
+		return this.state.loading ? (
+			<Loading />
+		) : (
 			<Content isMobile={this.state.isMobile}>
 				{this.state.papers.map((paper, i) => {
 					return (

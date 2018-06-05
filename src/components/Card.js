@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { Tooltip } from 'react-tippy';
-import P5Wrapper from 'react-p5-wrapper';
 
 import 'react-tippy/dist/tippy.css';
 
@@ -9,8 +8,6 @@ import calendarIcon from '../assets/calendar.png';
 import scihubIcon from '../assets/scihub.png';
 import citeIcon from '../assets/cite.png';
 import homeIcon from '../assets/home.png';
-
-import sketch from '../p5js/abstractgen';
 
 const Container = styled.div`
    
@@ -141,7 +138,7 @@ const InfoContainer = styled.div`
 `;
 
 const TypeCard = styled.div`
-	background: #4edbc0;
+	background: #ff7b92;
 	padding: 10px 30px 10px 30px;
 	max-width: 60px;
 	transform: translateY(-100%);
@@ -253,25 +250,6 @@ const MetadataInfo = styled.div`
 	}};
 `;
 
-const SmartSpacer = styled.div`
-	display: flex;
-	${props => {
-		if (props.active) {
-			// Active Mode
-			return css`
-				flex-flow: column;
-				height: 100%;
-			`;
-		} else {
-			// Normal Mode
-			return css`
-				flex-flow: column;
-				height: 100%;
-			`;
-		}
-	}};
-`;
-
 const CalendarIcon = styled.img`
 	width: auto;
 	height: 30px;
@@ -331,10 +309,6 @@ class Card extends Component {
 	state = {
 		active: false
 	};
-
-	constructor(props) {
-		super(props);
-	}
 
 	render() {
 		return (
