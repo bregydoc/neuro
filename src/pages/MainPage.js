@@ -107,9 +107,14 @@ class MainPage extends Component {
 	};
 
 	render() {
+		const currentLocation = this.props.location.pathname;
+		console.log(currentLocation);
 		return (
 			<MainContainer isMobile={this.state.isMobile}>
-				<SideBar isMobile={this.state.isMobile} />
+				<SideBar
+					isMobile={this.state.isMobile}
+					currentLocation={currentLocation}
+				/>
 
 				<NeuroTitle isMobile={this.state.isMobile}>
 					Neuro Research

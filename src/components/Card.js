@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { Tooltip } from 'react-tippy';
+import P5Wrapper from 'react-p5-wrapper';
 
 import 'react-tippy/dist/tippy.css';
 
@@ -8,6 +9,8 @@ import calendarIcon from '../assets/calendar.png';
 import scihubIcon from '../assets/scihub.png';
 import citeIcon from '../assets/cite.png';
 import homeIcon from '../assets/home.png';
+
+import sketch from '../p5js/abstractgen';
 
 const Container = styled.div`
    

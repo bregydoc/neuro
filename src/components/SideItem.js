@@ -5,7 +5,7 @@ const Title = styled.div`
 	color: ${props => (props.active ? 'white' : '#323232')};
 
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 10px;
 	font-family: 'Oswald', sans-serif;
 
 	position: relative;
@@ -16,7 +16,7 @@ const Title = styled.div`
 
 const Container = styled.div`
 	width: 100%;
-	background-color: ${props => (props.active ? '#3CA1AC' : 'transparent')};
+	background-color: ${props => (props.active ? '#0000004F' : 'transparent')};
 
 	text-align: center;
 
@@ -27,7 +27,7 @@ const Container = styled.div`
 		if (props.isMobile) {
 			return css`
 				/* padding: 0 10px 0 10px; */
-
+				padding-top: 3px;
 				height: 100%;
 			`;
 		} else {

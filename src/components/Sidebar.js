@@ -64,6 +64,9 @@ class Sidebar extends Component {
 	};
 
 	render() {
+		const selected = this.props.currentLocation.substring(1);
+		console.log(selected);
+
 		const noUnderLine = { textDecoration: 'none' };
 		if (this.props.isMobile) {
 			return (
@@ -74,7 +77,7 @@ class Sidebar extends Component {
 							title="State of the art"
 							normalIcon={stateoftheartNormal}
 							activeIcon={stateoftheartActive}
-							active={this.state.selected === 'sota'}
+							active={selected === 'sota'}
 							onClick={() => {
 								this.setState(s => (s.selected = 'sota'));
 							}}
@@ -87,9 +90,9 @@ class Sidebar extends Component {
 							title="Free Ideas"
 							normalIcon={freeideasNormal}
 							activeIcon={freeideasActive}
-							active={this.state.selected === 'free'}
+							active={selected === 'freeideas'}
 							onClick={() => {
-								this.setState(s => (s.selected = 'free'));
+								this.setState(s => (s.selected = 'freeideas'));
 							}}
 						/>
 					</Link>
@@ -100,9 +103,9 @@ class Sidebar extends Component {
 							title="Datasets"
 							normalIcon={datasetsNormal}
 							activeIcon={datasetsActive}
-							active={this.state.selected === 'data'}
+							active={selected === 'datasets'}
 							onClick={() => {
-								this.setState(s => (s.selected = 'data'));
+								this.setState(s => (s.selected = 'datasets'));
 							}}
 						/>
 					</Link>
@@ -113,7 +116,7 @@ class Sidebar extends Component {
 							title="GAN"
 							normalIcon={ganNormal}
 							activeIcon={ganActive}
-							active={this.state.selected === 'gan'}
+							active={selected === 'gan'}
 							onClick={() => {
 								this.setState(s => (s.selected = 'gan'));
 							}}
@@ -124,7 +127,9 @@ class Sidebar extends Component {
 		} else {
 			return (
 				<Container isMobile={this.props.isMobile}>
-					<Logo src={logo} />
+					<Link to="/" style={noUnderLine}>
+						<Logo src={logo} />
+					</Link>
 					<Spacer size={6} />
 					<Link to="/sota" style={noUnderLine}>
 						<SideItem
@@ -132,7 +137,7 @@ class Sidebar extends Component {
 							title="State of the art"
 							normalIcon={stateoftheartNormal}
 							activeIcon={stateoftheartActive}
-							active={this.state.selected === 'sota'}
+							active={selected === 'sota'}
 							onClick={() => {
 								this.setState(s => (s.selected = 'sota'));
 							}}
@@ -144,9 +149,9 @@ class Sidebar extends Component {
 							title="Free Ideas"
 							normalIcon={freeideasNormal}
 							activeIcon={freeideasActive}
-							active={this.state.selected === 'free'}
+							active={selected === 'freeideas'}
 							onClick={() => {
-								this.setState(s => (s.selected = 'free'));
+								this.setState(s => (s.selected = 'freeideas'));
 							}}
 						/>
 					</Link>
@@ -157,9 +162,9 @@ class Sidebar extends Component {
 							title="Datasets"
 							normalIcon={datasetsNormal}
 							activeIcon={datasetsActive}
-							active={this.state.selected === 'data'}
+							active={selected === 'datasets'}
 							onClick={() => {
-								this.setState(s => (s.selected = 'data'));
+								this.setState(s => (s.selected = 'datasets'));
 							}}
 						/>
 					</Link>
@@ -170,7 +175,7 @@ class Sidebar extends Component {
 							title="GAN"
 							normalIcon={ganNormal}
 							activeIcon={ganActive}
-							active={this.state.selected === 'gan'}
+							active={selected === 'gan'}
 							onClick={() => {
 								this.setState(s => (s.selected = 'gan'));
 							}}

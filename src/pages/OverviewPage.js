@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import P5Wrapper from 'react-p5-wrapper';
-
-import sketch from '../p5js/abstractgen';
 
 class OverviewPage extends Component {
 	state = {
@@ -11,14 +8,12 @@ class OverviewPage extends Component {
 	render() {
 		return (
 			<div>
-				<h1
-					onClick={this.setState(s => {
-						r: s.r++;
-					})}
-				>
-					Hello World, I'm Neuro Research
-				</h1>
-				<P5Wrapper sketch={sketch} rotation={this.state.r} />
+				<div>What is this?</div>
+				<div>
+					Corporis minima et rerum eum exercitationem autem. Cum quo
+					sed explicabo alias sint. Sit minus aspernatur accusantium
+					vel eligendi qui.
+				</div>
 			</div>
 		);
 	}
