@@ -14,6 +14,7 @@ const Content = styled.div`
 		if (props.isMobile) {
 			return css`
 				flex-flow: column;
+				padding-bottom: 80px;
 			`;
 		} else {
 			return css``;
@@ -73,6 +74,7 @@ class StateOfTheArt extends Component {
 							title={paper.title}
 							author={paper.authors[0]}
 							description={paper.description}
+							year={paper.year}
 							url={paper.url}
 							type="paper"
 							key={i}

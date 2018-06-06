@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 
 const Container = styled.div`
 	/* margin-right: 28px; */
-	background-color: #4edbc0;
+	background-color: #01e19f;
 
 	${props => {
 		if (props.isMobile) {

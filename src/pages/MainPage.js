@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
+import Konami from 'react-konami-code';
 
 import SideBar from '../components/Sidebar';
 
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 
 import SotaPage from './SotaPage';
 import OverviewPage from './OverviewPage';
@@ -119,41 +120,53 @@ class MainPage extends Component {
 			};
 		});
 	};
+	easterEgg = () => {
+		console.log('Konami Code!');
+		alert('Hey, You are a friki!');
+	};
 
 	render() {
 		const currentLocation = this.props.location.pathname;
+		const noUnderLine = { textDecoration: 'none' };
 
 		return (
-			<MainContainer isMobile={this.state.isMobile}>
-				<SideBar
-					isMobile={this.state.isMobile}
-					currentLocation={currentLocation}
-				/>
+			<div>
+				<Konami action={this.easterEgg} />
 
-				<NeuroTitle isMobile={this.state.isMobile}>
-					Neuro Research
-					<ContentTitle>{pages[currentLocation]}</ContentTitle>
-				</NeuroTitle>
+				<MainContainer isMobile={this.state.isMobile}>
+					<SideBar
+						isMobile={this.state.isMobile}
+						currentLocation={currentLocation}
+					/>
 
-				<ContentContainer isMobile={this.state.isMobile}>
-					<Switch>
-						<Route path="/" exact component={OverviewPage} />
-						<Route path="/sota" component={SotaPage} />
-						<Route
-							path="/freeideas"
-							component={() => <h1>Hello Free</h1>}
-						/>
-						<Route
-							path="/datasets"
-							component={() => <h1>Hello Datasets</h1>}
-						/>
-						<Route
-							path="/gan"
-							component={() => <h1>Hello GAN</h1>}
-						/>
-					</Switch>
-				</ContentContainer>
-			</MainContainer>
+					<Link to="/" style={noUnderLine}>
+						<NeuroTitle isMobile={this.state.isMobile}>
+							Neuro Research
+							<ContentTitle>
+								{pages[currentLocation]}
+							</ContentTitle>
+						</NeuroTitle>
+					</Link>
+					<ContentContainer isMobile={this.state.isMobile}>
+						<Switch>
+							<Route path="/" exact component={OverviewPage} />
+							<Route path="/sota" component={SotaPage} />
+							<Route
+								path="/freeideas"
+								component={() => <h1>Hello Free</h1>}
+							/>
+							<Route
+								path="/datasets"
+								component={() => <h1>Hello Datasets</h1>}
+							/>
+							<Route
+								path="/gan"
+								component={() => <h1>Hello GAN</h1>}
+							/>
+						</Switch>
+					</ContentContainer>
+				</MainContainer>
+			</div>
 		);
 	}
 }

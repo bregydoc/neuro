@@ -118,57 +118,53 @@ class OverviewPage extends Component {
 	};
 
 	render() {
-		{
-			return this.state.isMobile ? (
+		return this.state.isMobile ? (
+			<WrapperText isMobile={this.state.isMobile}>
+				<Question isMobile={this.state.isMobile}>
+					What is this?
+				</Question>
+				<ResponseImage src={brain} isMobile={this.state.isMobile} />
+				<BodyText isMobile={this.state.isMobile}>
+					Motor Imagery is a mental simulation of action, the current
+					state of the art show us how classify and recognize the EEG
+					signals related to Motor imagery using algorithms based on
+					machine learning (e.g. Artificial Neural Networks) and with
+					this understand or categorize the mental motor cognitive
+					task emergent to the patient. In this article I'm going to
+					try to use classify Motor Imagery EEG signals with a new
+					Artificial Intelligence technique, Generative Adversary
+					Networks (GAN). My true focus is not classify the EEG
+					signal, but, create a new way to understand it (Motor
+					Imagery behavior), create a model can find the correct way
+					to classify the EEG signals.
+				</BodyText>
+			</WrapperText>
+		) : (
+			<Wrapper isMobile={this.state.isMobile}>
 				<WrapperText isMobile={this.state.isMobile}>
 					<Question isMobile={this.state.isMobile}>
 						What is this?
 					</Question>
-					<ResponseImage src={brain} isMobile={this.state.isMobile} />
 					<BodyText isMobile={this.state.isMobile}>
-						Can you imagine what we will be downloading in another
-						twenty years? I mean who would have ever thought that
-						you could record sound with digital quality fifty years
-						ago? Now we routinely download whole albums worth of
-						music in a couple of minutes to ipods that hold
-						thousands of songs in the space the size of a zippo
-						lighter!. Can you imagine what we will be downloading in
-						another twenty years? I mean who would have ever thought
-						that you could record sound with digital quality fifty
-						years ago? Now we routinely download whole albums worth
-						of music in a couple of minutes to ipods that hold
-						thousands of songs in the space the size of a zippo
-						lighter!
+						Motor Imagery is a mental simulation of action, the
+						current state of the art show us how classify and
+						recognize the EEG signals related to Motor imagery using
+						algorithms based on machine learning (e.g. Artificial
+						Neural Networks) and with this understand or categorize
+						the mental motor cognitive task emergent to the patient.
+						In this article I'm going to try to use classify Motor
+						Imagery EEG signals with a new Artificial Intelligence
+						technique, Generative Adversary Networks (GAN). My true
+						focus is not classify the EEG signal, but, create a new
+						way to understand it (Motor Imagery behavior), create a
+						model can find the correct way to classify the EEG
+						signals.
 					</BodyText>
 				</WrapperText>
-			) : (
-				<Wrapper isMobile={this.state.isMobile}>
-					<WrapperText isMobile={this.state.isMobile}>
-						<Question isMobile={this.state.isMobile}>
-							What is this?
-						</Question>
-						<BodyText isMobile={this.state.isMobile}>
-							Can you imagine what we will be downloading in
-							another twenty years? I mean who would have ever
-							thought that you could record sound with digital
-							quality fifty years ago? Now we routinely download
-							whole albums worth of music in a couple of minutes
-							to ipods that hold thousands of songs in the space
-							the size of a zippo lighter!. Can you imagine what
-							we will be downloading in another twenty years? I
-							mean who would have ever thought that you could
-							record sound with digital quality fifty years ago?
-							Now we routinely download whole albums worth of
-							music in a couple of minutes to ipods that hold
-							thousands of songs in the space the size of a zippo
-							lighter!
-						</BodyText>
-					</WrapperText>
 
-					<ResponseImage src={brain} isMobile={this.state.isMobile} />
-				</Wrapper>
-			);
-		}
+				<ResponseImage src={brain} isMobile={this.state.isMobile} />
+			</Wrapper>
+		);
 	}
 }
 

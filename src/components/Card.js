@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { Tooltip } from 'react-tippy';
+import Modal from 'react-responsive-modal';
 
 import 'react-tippy/dist/tippy.css';
 
@@ -147,6 +148,7 @@ const TypeCard = styled.div`
 	color: white;
 	font-weight: 500;
 	text-transform: uppercase;
+	border-top-right-radius: 4px;
 `;
 
 const InfoCard = styled.div`
@@ -305,78 +307,174 @@ const AccessLinks = styled.div`
 	align-items: center;
 `;
 
+const MoreInformation = styled.div`
+	padding: 10px;
+	text-align: center;
+	color: #1b1a40;
+	font-weight: 700;
+	transition: 0.7s;
+	width: auto;
+
+	font-family: 'Nunito Sans', sans-serif;
+
+	${props => {
+		if (props.active) {
+			// Active Mode
+			return css`
+				margin-top: 30px;
+				margin-bottom: -66px;
+				margin-left: 20px;
+				margin-right: 20px;
+				border-radius: 4px;
+				cursor: pointer;
+			`;
+		} else {
+			// Normal Mode
+			return css`
+				display: none;
+				/* margin-top: auto; */
+			`;
+		}
+	}};
+`;
+
+const ExtraContentWrapper = styled.div`
+	display: flex;
+	flex-flow: column;
+	margin-top: 20px;
+`;
+const ExtraContentTitle = styled.div`
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 28px;
+`;
+
+const ExtraContent = styled.div`
+	margin-top: 15px;
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 16px;
+	line-height: 30px;
+	margin-bottom: 10px;
+`;
+
 class Card extends Component {
 	state = {
-		active: false
+		active: false,
+		dialogActive: false
+	};
+
+	openDialog = e => {
+		this.setState(s => {
+			return { ...s, dialogActive: true };
+		});
+	};
+
+	closeDialog = e => {
+		this.setState(s => {
+			return { ...s, dialogActive: false };
+		});
 	};
 
 	render() {
 		return (
-			<Container
-				isMobile={this.props.isMobile}
-				onMouseEnter={e => {
-					this.setState(s => (s.active = true));
-				}}
-				onMouseLeave={e => {
-					this.setState(s => (s.active = false));
-				}}
-				active={this.state.active}
-			>
-				<BackgroundCard
+			<div>
+				<Modal
+					open={this.state.dialogActive}
+					onClose={this.closeDialog}
+					center
+				>
+					<ExtraContentWrapper>
+						<ExtraContentTitle>
+							EEG Signal with PSO
+						</ExtraContentTitle>
+						<ExtraContent>
+							Motor Imagery is a mental simulation of action, the
+							current state of the art show us how classify and
+							recognize the EEG signals related to Motor imagery
+							using algorithms based on machine learning (e.g.
+							Artificial Neural Networks) and with this understand
+							or categorize the mental motor cognitive task
+							emergent to the patient.
+						</ExtraContent>
+					</ExtraContentWrapper>
+				</Modal>
+				<Container
 					isMobile={this.props.isMobile}
+					onMouseEnter={e => {
+						this.setState(s => (s.active = true));
+					}}
+					onMouseLeave={e => {
+						this.setState(s => (s.active = false));
+					}}
 					active={this.state.active}
 				>
-					<BackgroundHover active={this.state.active} />
-				</BackgroundCard>
+					<BackgroundCard
+						isMobile={this.props.isMobile}
+						active={this.state.active}
+					>
+						<BackgroundHover active={this.state.active} />
+					</BackgroundCard>
 
-				<InfoContainer active={this.state.active}>
-					<TypeCard>{this.props.type}</TypeCard>
-					<InfoCard>
-						<TitleInfo>{this.props.title}</TitleInfo>
-						<AuthorInfo>{this.props.author}</AuthorInfo>
-						<QuestionInfo active={this.state.active}>
-							What they did?
-						</QuestionInfo>
-						<DescriptionInfo active={this.state.active}>
-							{this.props.description}
-						</DescriptionInfo>
-						{/* <SmartSpacer active={this.state.active} /> */}
-						<MetadataInfo active={this.state.active}>
-							<PublicationDate>
-								<CalendarIcon src={calendarIcon} />
-								<span>2013</span>
-							</PublicationDate>
-							<AccessLinks>
-								<Tooltip
-									title="Go to Scihub link!"
-									position="top"
-									trigger="mouseenter"
-									inertia={true}
-								>
-									<SciHubIcon src={scihubIcon} />
-								</Tooltip>
-								<Tooltip
-									title="Copy a cite"
-									position="top"
-									trigger="mouseenter"
-									inertia={true}
-								>
-									<CiteIcon src={citeIcon} />
-								</Tooltip>
+					<InfoContainer active={this.state.active}>
+						<TypeCard>{this.props.type}</TypeCard>
+						<InfoCard>
+							<TitleInfo>{this.props.title}</TitleInfo>
+							<AuthorInfo>{this.props.author}</AuthorInfo>
+							<QuestionInfo active={this.state.active}>
+								What they did?
+							</QuestionInfo>
+							<DescriptionInfo active={this.state.active}>
+								{this.props.description}
+							</DescriptionInfo>
+							{/* <SmartSpacer active={this.state.active} /> */}
+							<MoreInformation
+								active={this.state.active}
+								onClick={this.openDialog}
+							>
+								MORE INFORMATION
+							</MoreInformation>
+							<MetadataInfo active={this.state.active}>
+								<PublicationDate>
+									<CalendarIcon src={calendarIcon} />
+									<span>{this.props.year}</span>
+								</PublicationDate>
+								<AccessLinks>
+									<Tooltip
+										title="Go to Scihub link!"
+										position="top"
+										trigger="mouseenter"
+										inertia={true}
+									>
+										<a href={this.props.url}>
+											<SciHubIcon src={scihubIcon} />
+										</a>
+									</Tooltip>
+									<Tooltip
+										title="Copy a cite"
+										position="top"
+										trigger="mouseenter"
+										inertia={true}
+									>
+										<CiteIcon src={citeIcon} />
+									</Tooltip>
 
-								<Tooltip
-									title="Home website"
-									position="top"
-									trigger="mouseenter"
-									inertia={true}
-								>
-									<HomeIcon src={homeIcon} />
-								</Tooltip>
-							</AccessLinks>
-						</MetadataInfo>
-					</InfoCard>
-				</InfoContainer>
-			</Container>
+									<Tooltip
+										title="Home website"
+										position="top"
+										trigger="mouseenter"
+										inertia={true}
+									>
+										<a href={this.props.url}>
+											<HomeIcon src={homeIcon} />
+										</a>
+									</Tooltip>
+								</AccessLinks>
+							</MetadataInfo>
+						</InfoCard>
+					</InfoContainer>
+				</Container>
+			</div>
 		);
 	}
 }
