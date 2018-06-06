@@ -10,9 +10,7 @@ import scihubIcon from '../assets/scihub.png';
 import citeIcon from '../assets/cite.png';
 import homeIcon from '../assets/home.png';
 
-const Container = styled.div`
-   
-	
+const Container = styled.div`	
 	border-radius: 4px;
 	overflow-y: hidden;
 
@@ -254,13 +252,13 @@ const MetadataInfo = styled.div`
 
 const CalendarIcon = styled.img`
 	width: auto;
-	height: 30px;
+	height: 20px;
 	margin-right: 10px;
 `;
 
 const PublicationDate = styled.div`
 	font-family: 'Nunito Sans', sans-serif;
-	font-size: 18px;
+	font-size: 14px;
 	color: #6e6e6e;
 
 	display: flex;
@@ -366,13 +364,13 @@ class Card extends Component {
 
 	openDialog = e => {
 		this.setState(s => {
-			return { ...s, dialogActive: true };
+			return { ...s, dialogActive: true, active: true };
 		});
 	};
 
 	closeDialog = e => {
 		this.setState(s => {
-			return { ...s, dialogActive: false };
+			return { ...s, dialogActive: false, active: false };
 		});
 	};
 

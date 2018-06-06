@@ -65,7 +65,6 @@ class Sidebar extends Component {
 
 	render() {
 		const selected = this.props.currentLocation.substring(1);
-		console.log(selected);
 
 		const noUnderLine = { textDecoration: 'none' };
 		if (this.props.isMobile) {
