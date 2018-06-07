@@ -23,7 +23,7 @@ const Container = styled.div`
 			return css`
 				position: fixed;
 				bottom: 0;
-				z-index: 1;
+				z-index: 6;
 				height: 10vh;
 				width: 100vw;
 				display: flex;

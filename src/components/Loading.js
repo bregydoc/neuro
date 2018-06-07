@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 import logoLoading from '../assets/neuro_loader.png';
 const Background = styled.div`
-	background-color: #323232;
+	background-color: #282632;
 	position: absolute;
 	top: 0;
 	left: 0;

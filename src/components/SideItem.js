@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
 const Title = styled.div`
-	color: ${props => (props.active ? 'white' : '#323232')};
+	color: ${props => (props.active ? 'white' : '#282632')};
 
 	text-transform: uppercase;
 	font-size: 10px;

@@ -3,7 +3,7 @@
 		{
 			"title": "Classification of EEG with Recurrent Neural Networks",
 			"year": 2010,
-			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
+			"authors": ["Alex S. Greaves"],
 			"url": "https://cs224d.stanford.edu/reports/GreavesAlex.pdf",
 			"description":
 				"They tried to classify whether someone is viewing a 2D or 3D image (DP3). With emphasis on Neural Networks Classificators, particulary Recurrent Neural Networks.",
@@ -13,10 +13,184 @@
 				"content":
 					"Is not easy use RNN and they says is necessary improve de complexity of their model of RNN. But for this case where the EEG is by nature sequences of vectors, as words are, the relationship from one element in the sequence to the next must be different. is better to use a simple feedfordward nets."
 			}
+		},
+		{
+			"title":
+				"Deep Convolutional Neural Networks for Mental Load Classification based on EEG Data",
+			"year": 2012,
+			"authors": [
+				"Zhicheng Jiao",
+				"Xinbo Gao",
+				"Ying Wang",
+				"Jie Li",
+				"Haojun Xu"
+			],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0031320317304879",
+			"description":
+				"They used Deep Convolutional Neural Networks for understand their effectiveness in decoding electroencephalography (EEG) signals for mental load related to memory process, with a special emphasys to evaluate many configurations for DCNN.",
+			"front_image":
+				"https://cdn-industry.pressidium.com/wp-content/uploads/2016/12/02e1c64247d76f59535d1d123ad8a3c5.jpeg",
+			"extra_information": {
+				"title": "Extra information about the method",
+				"content":
+					"They had EEG data of 21 channels (7-frame data and each frame is composed of theta, alpha, and beta maps). Their used 6 differents models of CNN and 5 another models to compare. Their data for train and test was categorize and each EEG data represent individual mental load of different capacities during working memory tasks."
+			}
+		},
+		{
+			"title":
+				"Generative Adversarial Networks Conditioned by Brain Signals",
+			"year": 2017,
+			"authors": [
+				"S. Palazzo",
+				"C. Spampinato",
+				"I.Kavasidis",
+				"D. Giordano"
+			],
+			"url":
+				"http://sci-hub.hk/https://ieeexplore.ieee.org/document/8237631/",
+			"description":
+				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there **  (Encoder from EEG signals to discriminate between visual object categories)  **. Virtually they tried to 'read the mind'.",
+			"front_image":
+				"https://theneuralperspective.files.wordpress.com/2016/10/screen-shot-2016-11-05-at-9-14-02-am.png?w=620",
+			"extra_information": {
+				"title": "How it did work?",
+				"content":
+					"Six subjects partecipated in the experiment and were shown images of objects while EEG data was recorded. **  The subjects were shown 50 images from 40 different object classes4 for a total of 2,000 images per subject.  ** Each image class was presented in bursts of 25 seconds (0.5 second per image) followed by a 10 seconds pause where a black image was shown."
+			}
+		},
+		{
+			"title":
+				"Evaluating Spiking Neural Models in the Classification of Motor Imagery EEG Signals using Short Calibration Sessions.",
+			"year": 2018,
+			"authors": ["R. Salazar-Varas", "Roberto A. Vazquez"],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S1568494618301133",
+			"description":
+				"This paper talk about the use of the ** Spiking Neural Model ** for improve the time of classification for a common mental task: ** Motor Imagery **. For this goal they made a short calibration session and feature extraction before of classification stage.",
+			"front_image":
+				"https://media.nature.com/m685/nature-assets/neuro/journal/v19/n3/images/nn.4241-F3.jpg",
+			"extra_information": {
+				"title": "Conclusions",
+				"content":
+					"** SNM have a advantage for classify motor imagery movements **. In few cases, the RBF and the FNN achieved a better accuracy than the SNM, however, those models in average require more than 30 neurons to obtain that results, ** whereas the SNM only one neuron **."
+			}
+		},
+		{
+			"title":
+				"Motor imagery classification for Brain-Computer Interfaces through a chaotic neural network",
+			"year": 2010,
+			"authors": [
+				"Denis Renato de Moraes Piazentin",
+				"Joao Luis Garcia Rosa"
+			],
+			"url":
+				"http://sci-hub.hk/https://ieeexplore.ieee.org/document/6889636/",
+			"description":
+				"In this paper the authors try to ** improve the motor imagenery classification, specially control states **, using an online brain-computer interfaces (BCI) using ** K-sets are chaotic neural networks based on the olfactory bulb function **. They choosed this method because CHNN are good for work with noisy signals.",
+			"front_image":
+				"https://media.springernature.com/full/nature-static/assets/v1/image-assets/nn.3405-F1.jpg",
+			"extra_information": {
+				"title": "Conclusions",
+				"content":
+					"In this paper, a biologically motivated neural network, the KIII network, has been applied for motor imagery classification in EEG signals. The experimental results indicate that the KIII can improve the quality of classification, reducing the mean-squared error. We employed 7 public datasets from the BCI Competition IV for training and testing the KIII model. Comparisons between KIII with other algorithms (RBF, MLP, LDA and KNN) show that the K-model achieves better results in this domain. There is need for future studies to explore improvements of the proposed KIII-based method. Additional motor imagery datasets could also be explored."
+			}
 		}
 	],
 
-	"papers_v2": [],
+	"papers_v2": [
+		{
+			"title":
+				"EEG-based Motor Imagery Classification using Wavelet Coefficients and Ensemble Classifiers",
+			"year": 2012,
+			"authors": [
+				"Reza Ebrahimpour",
+				"Kioumars Babakhani",
+				"Morteza Mohammad-Noori"
+			],
+			"url":
+				"http://sci-hub.hk/https://ieeexplore.ieee.org/document/6313791/",
+			"description":
+				"They used a discrete wavelet transform for extract features and presenting them into classifiers, this method (Wavelet transform) has better accuracy than raw EEG data. Then suggest use a frequency transformation to try to find features and decompose the EEG signal.",
+			"front_image":
+				"http://matlab.izmiran.ru/help/toolbox/wavelet/apdetcfs.gif",
+			"extra_information": {
+				"title": "",
+				"content": ""
+			}
+		},
+		{
+			"title":
+				"Comparison of signal decomposition methods in classification of EEG signals for motor-imagery BCI system",
+			"year": 2016,
+			"authors": ["Jasmin Kevric", "Abdulhamit Subasi"],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S1746809416301331",
+			"description":
+				"Wavelet Packet Decomposition was superior to other signal decomposition methods. Also talk about the importance of the higher frequency into signal adquisition to improve classification in BCI systems",
+			"front_image":
+				"https://ai2-s2-public.s3.amazonaws.com/figures/2017-08-08/d996ffc3e1990f27dd90312f2f612325e58e1cfa/3-Figure1-1.png",
+			"extra_information": {
+				"title": "",
+				"content": ""
+			}
+		},
+		{
+			"title":
+				"Mu rhythm (de)synchronization and EEG single-trial classification of different motor imagery tasks",
+			"year": 2005,
+			"authors": [
+				"G. Pfurtscheller",
+				"C. Brunner",
+				"A. Schlo",
+				"Lopes da Silva"
+			],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S1053811905025140",
+			"description":
+				"In this paper they tried to find a desynchronized mu rhythm. This implies that such EEG phenomena may be utilized in a multi-class brain – computer interface (BCI) operated simply by motor imagery.",
+			"front_image":
+				"https://image.slidesharecdn.com/murhythm-151214033529/95/mu-rhythm-25-638.jpg?cb=1450064148",
+			"extra_information": {
+				"title": "Conclusions",
+				"content":
+					"During performance of different motor imagery tasks, there exists not only a great intersubject variability but also a considerable intrasubject variability concerning the reactivity of upper mu components. Different types of band power changes (enhancement vs. suppression) during different imagery tasks are a prerequisite for an optimal distinctiveness between different motor imagery tasks when single trials are analyzed. We should emphasize that the ERD/ERS changes reported here were elicited by imagining movements. This implies that such EEG phenomena may be utilized in a brain – computer interface operated simply by motor imagery. Since a number of psychophysiological variables related to perceptual and memory processes and task complexity result in a desynchronization of alpha band rhythms (Klimesch, 1999), it is very difficult to discriminate between more than two mental states when only imagery-induced ERD patterns are available."
+			}
+		},
+		{
+			"title":
+				"EEG-based motor imagery classification using neuro-fuzzy prediction and wavelet fractal features",
+			"year": 2010,
+			"authors": ["Wei-Yen Hsu"],
+			"url":
+				"https://sci-hub.tw/https://www.sciencedirect.com/science/article/pii/S0165027010001858",
+			"description":
+				"In this paper, a feature extraction method through the time-series prediction based on the ANFIS time-series prediction together with multiresolution fractal feature vectors (MFFVs) is applied for feature extraction in motor imagery (MI) classification.",
+			"front_image":
+				"https://www.researchgate.net/profile/Amir_Khayyat/publication/224829069/figure/fig3/AS:302700639080454@1449180864840/Architecture-of-the-neuro-fuzzy-control-strategy-The-neural-network-is-trained-to.png",
+			"extra_information": {
+				"title": "",
+				"content": ""
+			}
+		},
+		{
+			"title":
+				"Classification of mental task from EEG data using neural networks based on particle swarm optimization.",
+			"year": 2010,
+			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0925231208001859",
+			"description":
+				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'.",
+			"front_image":
+				"http://mechanismsrobotics.asmedigitalcollection.asme.org/data/journals/jmroa6/935090/jmr_008_04_041003_f001.png",
+			"extra_information": {
+				"title": "Particle Swarm Information",
+				"content":
+					"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories)."
+			}
+		}
+	],
 
 	"papers_v3": [
 		{

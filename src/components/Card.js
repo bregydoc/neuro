@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 import { Tooltip } from 'react-tippy';
 import Modal from 'react-responsive-modal';
-
+import ReactMarkdown from 'react-markdown';
 import Image from 'lqip-react';
 
 import 'react-tippy/dist/tippy.css';
@@ -411,7 +411,9 @@ class Card extends Component {
 							{this.props.extraInfo.title}
 						</ExtraContentTitle>
 						<ExtraContent>
-							{this.props.extraInfo.content}
+							<ReactMarkdown
+								source={this.props.extraInfo.content}
+							/>
 						</ExtraContent>
 					</ExtraContentWrapper>
 				</Modal>
@@ -449,7 +451,9 @@ class Card extends Component {
 								What they did?
 							</QuestionInfo>
 							<DescriptionInfo active={this.state.active}>
-								{this.props.description}
+								<ReactMarkdown
+									source={this.props.description}
+								/>
 							</DescriptionInfo>
 							{/* <SmartSpacer active={this.state.active} /> */}
 							<MoreInformation

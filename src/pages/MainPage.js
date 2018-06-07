@@ -186,11 +186,15 @@ const pages = {
 class MainPage extends Component {
 	constructor(props, context) {
 		super(props, context);
+
+		var sotaVer = this.props.location.pathname.split('/');
+		sotaVer = sotaVer[sotaVer.length - 1];
+		// console.log(sotaVer);
 		this.state = {
 			width: window.innerWidth,
 			isMobile: window.innerWidth < 500,
 			currentPage: 'State of the art',
-			currentSOTASel: '0'
+			currentSOTASel: sotaVer
 		};
 	}
 
@@ -218,7 +222,10 @@ class MainPage extends Component {
 	};
 
 	changeSOTASelector = e => {
-		console.log(e.target.value);
+		const SOTAto = e.target.value;
+		this.setState(s => {
+			return { ...s, currentSOTASel: SOTAto };
+		});
 		this.props.history.push('/sota/' + e.target.value);
 	};
 
@@ -283,7 +290,7 @@ class MainPage extends Component {
 						{currentLocation.includes('/sota') ? (
 							<SelectorWrapper isMobile={this.state.isMobile}>
 								<SOTASelector
-									value={this.currentSOTASel}
+									value={this.state.currentSOTASel}
 									onChange={this.changeSOTASelector}
 								>
 									<option value="v1">

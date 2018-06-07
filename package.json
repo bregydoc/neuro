@@ -7,12 +7,12 @@
 		"react": "^16.4.0",
 		"react-dom": "^16.4.0",
 		"react-konami-code": "^1.2.0",
+		"react-markdown": "^3.3.2",
 		"react-responsive-modal": "^3.0.2",
 		"react-router": "^4.2.0",
 		"react-router-dom": "^4.2.2",
 		"react-scripts": "1.1.4",
 		"react-tippy": "^1.2.2",
-		"reimgix": "^0.1.0",
 		"styled-components": "^3.3.0"
 	},
 	"scripts": {
