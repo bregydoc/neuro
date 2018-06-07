@@ -325,8 +325,8 @@ const MoreInformation = styled.div`
 		if (props.active) {
 			// Active Mode
 			return css`
-				margin-top: 30px;
-				margin-bottom: -66px;
+				/* margin-top: 30px; */
+				margin-bottom: -24%;
 				margin-left: 20px;
 				margin-right: 20px;
 				border-radius: 4px;
