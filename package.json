@@ -1,22 +1,18 @@
 {
-	"name": "neuror",
-	"version": "0.1.0",
+	"name": "neuroresearch",
+	"version": "0.1.2",
 	"private": true,
 	"dependencies": {
-		"lqip.macro": "^0.1.5",
+		"lqip-react": "^1.0.1",
 		"react": "^16.4.0",
 		"react-dom": "^16.4.0",
-		"react-ideal-image": "^0.0.4",
 		"react-konami-code": "^1.2.0",
-		"react-modal": "^3.4.5",
-		"react-p5-wrapper": "^0.0.4",
 		"react-responsive-modal": "^3.0.2",
 		"react-router": "^4.2.0",
 		"react-router-dom": "^4.2.2",
 		"react-scripts": "1.1.4",
 		"react-tippy": "^1.2.2",
-		"react-waypoint": "^8.0.1",
-		"require-from-string": "^2.0.2",
+		"reimgix": "^0.1.0",
 		"styled-components": "^3.3.0"
 	},
 	"scripts": {

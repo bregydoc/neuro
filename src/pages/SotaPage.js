@@ -28,7 +28,7 @@ class StateOfTheArt extends Component {
 	state = {
 		width: window.innerWidth,
 		isMobile: window.innerWidth < widthMinMobile,
-		papers: papers.papers,
+		papers: papers,
 		loading: true
 	};
 
@@ -48,8 +48,11 @@ class StateOfTheArt extends Component {
 				this.setState(prevState => {
 					return { ...prevState, loading: false };
 				}),
-			2000
+			1000
 		);
+		// this.setState(prevState => {
+		// 	return { ...prevState, loading: false };
+		// });
 	}
 
 	handleWindowSizeChange = () => {
@@ -63,11 +66,16 @@ class StateOfTheArt extends Component {
 	};
 
 	render() {
+		// console.log(this.props.location.pathname);
+		var sotaVer = this.props.location.pathname.split('/');
+		sotaVer = sotaVer[sotaVer.length - 1];
+
+		const currentPapers = this.state.papers['papers_' + sotaVer];
 		return this.state.loading ? (
 			<Loading />
 		) : (
 			<Content isMobile={this.state.isMobile}>
-				{this.state.papers.map((paper, i) => {
+				{currentPapers.map((paper, i) => {
 					return (
 						<Card
 							isMobile={this.state.isMobile}
@@ -77,6 +85,8 @@ class StateOfTheArt extends Component {
 							year={paper.year}
 							url={paper.url}
 							type="paper"
+							frontImage={paper.front_image}
+							extraInfo={paper.extra_information}
 							key={i}
 						/>
 					);

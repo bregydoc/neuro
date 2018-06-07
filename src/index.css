@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Lobster');
 
 body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+}
+
+::selection {
+	background: #00ffc1;
+}
+
+::moz-selection {
+	background: #00ffc1;
 }

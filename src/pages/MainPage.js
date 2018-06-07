@@ -189,7 +189,8 @@ class MainPage extends Component {
 		this.state = {
 			width: window.innerWidth,
 			isMobile: window.innerWidth < 500,
-			currentPage: 'State of the art'
+			currentPage: 'State of the art',
+			currentSOTASel: '0'
 		};
 	}
 
@@ -210,9 +211,15 @@ class MainPage extends Component {
 			};
 		});
 	};
+
 	easterEgg = () => {
 		console.log('Konami Code!');
 		alert('Hey, You are a friki!');
+	};
+
+	changeSOTASelector = e => {
+		console.log(e.target.value);
+		this.props.history.push('/sota/' + e.target.value);
 	};
 
 	render() {
@@ -267,17 +274,25 @@ class MainPage extends Component {
 						</NeuroTitle>
 					</Link>
 					<ContentTitle isMobile={this.state.isMobile}>
-						<span>{pages[currentLocation]}</span>
-						{currentLocation === '/sota' ? (
+						{currentLocation.includes('/sota') ? (
+							<span>{pages['/sota']}</span>
+						) : (
+							<span>{pages[currentLocation]}</span>
+						)}
+
+						{currentLocation.includes('/sota') ? (
 							<SelectorWrapper isMobile={this.state.isMobile}>
-								<SOTASelector>
-									<option value="0">
+								<SOTASelector
+									value={this.currentSOTASel}
+									onChange={this.changeSOTASelector}
+								>
+									<option value="v1">
 										State of the art v1
 									</option>
-									<option value="1">
+									<option value="v2">
 										State of the art v2
 									</option>
-									<option value="2">
+									<option value="v3">
 										State of the art v3
 									</option>
 								</SOTASelector>
@@ -288,7 +303,8 @@ class MainPage extends Component {
 					<ContentContainer isMobile={this.state.isMobile}>
 						<Switch>
 							<Route path="/" exact component={OverviewPage} />
-							<Route path="/sota" component={SotaPage} />
+							{/* <Route path="/sota" component={SotaPage} /> */}
+							<Route path="/sota/:version" component={SotaPage} />
 							<Route
 								path="/freeideas"
 								component={() => <h1>Hello Free</h1>}

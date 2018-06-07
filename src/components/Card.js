@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components';
 import { Tooltip } from 'react-tippy';
 import Modal from 'react-responsive-modal';
 
+import Image from 'lqip-react';
+
 import 'react-tippy/dist/tippy.css';
 
 import calendarIcon from '../assets/calendar.png';
@@ -74,7 +76,7 @@ const BackgroundCard = styled.div`
 		} else {
 			return css`
 				width: 100%;
-				background-image: url('https://placeimg.com/380/380/nature');
+				/* background-image: url(${props.frontImage}); */
 			`;
 		}
 	}};
@@ -94,7 +96,7 @@ const BackgroundCard = styled.div`
 const BackgroundHover = styled.div`
 	width: 100%;
 	height: 100%;
-
+	margin-top: -380px;
 	position: relative;
 
 	transition: 1s;
@@ -118,35 +120,36 @@ const InfoContainer = styled.div`
 	/* height: auto; */
 	flex-flow: column;
 
-	/* ${props => {
+	${props => {
 		if (props.active) {
 			return css`
-				height: calc(100%-20%);
+				height: 80%;
 			`;
 		} else {
 			return css`
-				height: calc(100%-60%);
+				height: 40%;
 			`;
 		}
-	}}; */
-
-	/* transition: 1s;
+	}};
+	transition: 0.8s;
+	/* 
 	:hover {
 		transform: translateY(-80%);
     } */
 `;
 
 const TypeCard = styled.div`
-	background: #ff7b92;
+	background: #ff5e7a;
 	padding: 10px 30px 10px 30px;
 	max-width: 60px;
 	transform: translateY(-100%);
-	margin-bottom: -40px;
+	margin-bottom: -42px;
 	font-family: 'Nunito Sans', sans-serif;
 	color: white;
 	font-weight: 500;
 	text-transform: uppercase;
 	border-top-right-radius: 4px;
+	z-index: 3;
 `;
 
 const InfoCard = styled.div`
@@ -163,6 +166,9 @@ const InfoCard = styled.div`
 	flex-flow: column;
 	justify-content: space-between;
 	flex: 1;
+
+	z-index: 2;
+	background-color: white;
 `;
 
 const TitleInfo = styled.div`
@@ -188,7 +194,7 @@ const DescriptionInfo = styled.div`
 	font-size: 16px;
 	color: #686868;
 
-	transition: 0.8s;
+	transition: 0.5s;
 
 	${props => {
 		if (props.active) {
@@ -356,6 +362,24 @@ const ExtraContent = styled.div`
 	margin-bottom: 10px;
 `;
 
+const CardImage = styled.div`
+	width: auto;
+	height: 50vh;
+	overflow: hidden;
+
+	transition: 1s;
+
+	${props => {
+		if (props.active) {
+			return css`
+				height: 170px;
+			`;
+		} else {
+			return css``;
+		}
+	}};
+`;
+
 class Card extends Component {
 	state = {
 		active: false,
@@ -384,16 +408,10 @@ class Card extends Component {
 				>
 					<ExtraContentWrapper>
 						<ExtraContentTitle>
-							EEG Signal with PSO
+							{this.props.extraInfo.title}
 						</ExtraContentTitle>
 						<ExtraContent>
-							Motor Imagery is a mental simulation of action, the
-							current state of the art show us how classify and
-							recognize the EEG signals related to Motor imagery
-							using algorithms based on machine learning (e.g.
-							Artificial Neural Networks) and with this understand
-							or categorize the mental motor cognitive task
-							emergent to the patient.
+							{this.props.extraInfo.content}
 						</ExtraContent>
 					</ExtraContentWrapper>
 				</Modal>
@@ -411,7 +429,15 @@ class Card extends Component {
 						isMobile={this.props.isMobile}
 						active={this.state.active}
 					>
-						<BackgroundHover active={this.state.active} />
+						<CardImage active={this.state.active}>
+							<Image
+								src={this.props.frontImage}
+								thumbnail={this.props.frontImage}
+								aspectRatio={'500x500'}
+								// aspectRatio={'300x370'} // could be '1024x768'
+							/>
+							<BackgroundHover active={this.state.active} />
+						</CardImage>
 					</BackgroundCard>
 
 					<InfoContainer active={this.state.active}>

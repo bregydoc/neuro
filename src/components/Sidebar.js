@@ -70,13 +70,13 @@ class Sidebar extends Component {
 		if (this.props.isMobile) {
 			return (
 				<Container isMobile={this.props.isMobile}>
-					<Link to="/sota" style={noUnderLine}>
+					<Link to="/sota/v1" style={noUnderLine}>
 						<SideItem
 							isMobile={this.props.isMobile}
 							title="State of the art"
 							normalIcon={stateoftheartNormal}
 							activeIcon={stateoftheartActive}
-							active={selected === 'sota'}
+							active={selected.includes('sota')}
 							onClick={() => {
 								this.setState(s => (s.selected = 'sota'));
 							}}
@@ -130,13 +130,13 @@ class Sidebar extends Component {
 						<Logo src={logo} />
 					</Link>
 					<Spacer size={6} />
-					<Link to="/sota" style={noUnderLine}>
+					<Link to="/sota/v1" style={noUnderLine}>
 						<SideItem
 							isMobile={this.props.isMobile}
 							title="State of the art"
 							normalIcon={stateoftheartNormal}
 							activeIcon={stateoftheartActive}
-							active={selected === 'sota'}
+							active={selected.includes('sota')}
 							onClick={() => {
 								this.setState(s => (s.selected = 'sota'));
 							}}

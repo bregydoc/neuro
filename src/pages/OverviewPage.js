@@ -28,7 +28,7 @@ const Question = styled.div`
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 900;
 
-	color: #ffd981;
+	color: #ffd13c;
 	text-transform: uppercase;
 
 	${props => {
@@ -89,6 +89,11 @@ const ResponseImage = styled.img`
 	/* height: auto; */
 `;
 
+const ResaltedText = styled.span`
+	font-family: 'Courgette', cursive;
+	font-size: 20px;
+`;
+
 const widthMinMobile = 800;
 
 class OverviewPage extends Component {
@@ -125,18 +130,21 @@ class OverviewPage extends Component {
 				</Question>
 				<ResponseImage src={brain} isMobile={this.state.isMobile} />
 				<BodyText isMobile={this.state.isMobile}>
-					Motor Imagery is a mental simulation of action, the current
-					state of the art show us how classify and recognize the EEG
-					signals related to Motor imagery using algorithms based on
-					machine learning (e.g. Artificial Neural Networks) and with
-					this understand or categorize the mental motor cognitive
-					task emergent to the patient. In this article I'm going to
-					try to use classify Motor Imagery EEG signals with a new
-					Artificial Intelligence technique, Generative Adversary
-					Networks (GAN). My true focus is not classify the EEG
-					signal, but, create a new way to understand it (Motor
-					Imagery behavior), create a model can find the correct way
-					to classify the EEG signals.
+					<ResaltedText>Motor Imagery</ResaltedText> is a mental
+					simulation of action, the current state of the art show us
+					how classify and recognize the EEG signals related to Motor
+					imagery using algorithms based on machine learning (e.g.
+					Artificial Neural Networks) and with this understand or
+					categorize the mental motor cognitive task emergent to the
+					patient. In this article I'm going to try to use classify
+					Motor Imagery EEG signals with a new Artificial Intelligence
+					technique,{' '}
+					<ResaltedText>
+						Generative Adversary Networks (GAN).
+					</ResaltedText>{' '}
+					My true focus is not classify the EEG signal, but, create a
+					new way to understand it (Motor Imagery behavior), create a
+					model can find the correct way to classify the EEG signals.
 				</BodyText>
 			</WrapperText>
 		) : (
@@ -146,19 +154,22 @@ class OverviewPage extends Component {
 						What is this?
 					</Question>
 					<BodyText isMobile={this.state.isMobile}>
-						Motor Imagery is a mental simulation of action, the
-						current state of the art show us how classify and
-						recognize the EEG signals related to Motor imagery using
-						algorithms based on machine learning (e.g. Artificial
-						Neural Networks) and with this understand or categorize
-						the mental motor cognitive task emergent to the patient.
-						In this article I'm going to try to use classify Motor
-						Imagery EEG signals with a new Artificial Intelligence
-						technique, Generative Adversary Networks (GAN). My true
-						focus is not classify the EEG signal, but, create a new
-						way to understand it (Motor Imagery behavior), create a
-						model can find the correct way to classify the EEG
-						signals.
+						<ResaltedText>Motor Imagery</ResaltedText> is a mental
+						simulation of action, the current state of the art show
+						us how classify and recognize the EEG signals related to
+						Motor imagery using algorithms based on machine learning
+						(e.g. Artificial Neural Networks) and with this
+						understand or categorize the mental motor cognitive task
+						emergent to the patient. In this article I'm going to
+						try to use classify Motor Imagery EEG signals with a new
+						Artificial Intelligence technique,{' '}
+						<ResaltedText>
+							Generative Adversary Networks (GAN).{' '}
+						</ResaltedText>{' '}
+						My true focus is not classify the EEG signal, but,
+						create a new way to understand it (Motor Imagery
+						behavior), create a model can find the correct way to
+						classify the EEG signals.
 					</BodyText>
 				</WrapperText>
 

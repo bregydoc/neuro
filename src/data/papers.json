@@ -1,5 +1,24 @@
 {
-	"papers": [
+	"papers_v1": [
+		{
+			"title": "Classification of EEG with Recurrent Neural Networks",
+			"year": 2010,
+			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
+			"url": "https://cs224d.stanford.edu/reports/GreavesAlex.pdf",
+			"description":
+				"They tried to classify whether someone is viewing a 2D or 3D image (DP3). With emphasis on Neural Networks Classificators, particulary Recurrent Neural Networks.",
+			"front_image": "http://mnemstudio.org/ai/nn/images/Elman1.gif",
+			"extra_information": {
+				"title": "Conclusions",
+				"content":
+					"Is not easy use RNN and they says is necessary improve de complexity of their model of RNN. But for this case where the EEG is by nature sequences of vectors, as words are, the relationship from one element in the sequence to the next must be different. is better to use a simple feedfordward nets."
+			}
+		}
+	],
+
+	"papers_v2": [],
+
+	"papers_v3": [
 		{
 			"title":
 				"Classification of mental task from EEG data using neural networks based on particle swarm optimization.",
@@ -8,37 +27,14 @@
 			"url":
 				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0925231208001859",
 			"description":
-				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'."
-		},
-		{
-			"title":
-				"Classification of mental task from EEG data using neural networks based on particle swarm optimization.",
-			"year": 2010,
-			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
-			"url":
-				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0925231208001859",
-			"description":
-				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'."
-		},
-		{
-			"title":
-				"Classification of mental task from EEG data using neural networks based on particle swarm optimization.",
-			"year": 2010,
-			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
-			"url":
-				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0925231208001859",
-			"description":
-				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'."
-		},
-		{
-			"title":
-				"Classification of mental task from EEG data using neural networks based on particle swarm optimization.",
-			"year": 2010,
-			"authors": ["Cheng-Jian Lin", "Cheng-Jian Lin"],
-			"url":
-				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0925231208001859",
-			"description":
-				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'."
+				"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories). Virtually they tried to 'read the mind'.",
+			"front_image":
+				"http://mechanismsrobotics.asmedigitalcollection.asme.org/data/journals/jmroa6/935090/jmr_008_04_041003_f001.png",
+			"extra_information": {
+				"title": "Particle Swarm Information",
+				"content":
+					"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories)."
+			}
 		}
 	]
 }
