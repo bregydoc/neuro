@@ -209,6 +209,89 @@
 				"content":
 					"This paper try to use a modern GAN algorithm for find a relation between eeg signals and image generated from there (Encoder from EEG signals to discriminate between visual object categories)."
 			}
+		},
+		{
+			"title":
+				"Filter bank common spatial pattern algorithm on BCI competition IV Datasets 2a and 2b",
+			"year": 2012,
+			"authors": [
+				"Kai Keng Ang",
+				"ZhengYang Chin",
+				"ChuanchuWang",
+				"Cuntai Guan",
+				"Haihong Zhang"
+			],
+			"url":
+				"https://www.frontiersin.org/articles/10.3389/fnins.2012.00039/full",
+			"description":
+				"In this paper, the Filter Bank Common Spatial Pattern (FBCSP) algorithm is presented to enhance the performance of the CSP algorithm by performing autonomous selection of discriminative subject-specific frequency range for band-pass filtering of the EEG measurements.",
+			"front_image":
+				"https://openi.nlm.nih.gov/imgs/512/32/4376947/PMC4376947_pone.0121262.g003.png",
+			"extra_information": {
+				"title": "More about the dataset 2A",
+				"content":
+					"BCI Competition IV (Tangermann et al., 2012) Dataset 2a comprised 4 classes of motor imagery EEG measurements from 9 subjects, namely, left hand, right hand, feet, and tongue. Two sessions, one for training and the other for evaluation, were recorded from each subject. Each session comprised 288 trials of data recorded with 22 EEG channels and 3 monopolar electrooculogram (EOG) channels (with left mastoid serving as reference). The performance of the FBCSP algorithm on the 4-class motor imagery data was evaluated by employing the 3 approaches of multi-class extension (DC, PW, and OVR) to FBCSP using the MIBIF feature selection algorithm."
+			}
+		},
+		{
+			"title":
+				"EEG-based Continuous Control of a Game using a 3 Channel Motor Imagery BCI",
+			"year": 2011,
+			"authors": [
+				"Damien Coyle",
+				"Jhonatan Garcia",
+				"Abdul R Satti",
+				"T Martin McGinnity"
+			],
+			"url":
+				"http://sci-hub.hk/https://ieeexplore.ieee.org/abstract/document/5952128/",
+			"description":
+				"In this paper, the authors used a 3 channels BCI and Dataset IV 2a from BCI competitions. With that, they tried to train a subject to play a 2D game. For their classificator they used and neural-time-seriesprediction-preprocessing (NTSPP).",
+			"front_image": "https://k62.kn3.net/5/6/9/6/E/7/1A3.png",
+			"extra_information": {
+				"title": "Is it useful?",
+				"content":
+					"A BCI which can be adapted quickly and easily to each individual with the capacity to provide accurate, stable and low latency feedback has been developed. The online performance of the new game suggests that the game can be used as new training paradigm and encourage subjects to maximize effort and help enhance performance.\n\n![table_results](https://k62.kn3.net/5/E/3/A/3/A/F27.png)"
+			}
+		},
+		{
+			"title":
+				"Multi-class Filter Bank Common Spatial Pattern for Four-Class Motor Imagery BCI",
+			"year": 2009,
+			"authors": [
+				"Zheng Yang Chin",
+				"Kai Keng Ang",
+				"Chuanchu Wang",
+				"Cuntai Guan",
+				"Haihong Zhang"
+			],
+			"url":
+				"http://sci-hub.hk/https://ieeexplore.ieee.org/abstract/document/5332383/",
+			"description":
+				"This paper investigates the classification of multiclass motor imagery for electroencephalogram (EEG)-based Brain-Computer Interface (BCI) using the Filter Bank Common Spatial Pattern (FBCSP) algorithm",
+			"front_image": "https://k62.kn3.net/6/E/1/C/A/B/61A.png",
+			"extra_information": {
+				"title": "Interesting Results",
+				"content":
+					"![resultstable](https://k62.kn3.net/0/A/B/C/2/E/206.png)\n\nThis paper investigated the performance of 3 approaches proposed for the multi-class extension to the Filter Bank Common Spatial Pattern (FBCSP) algorithm. These 3 approaches were evaluated on the 4-class motor imagery data of BCI Competition IV dataset IIa. The experimental results showed no significant difference between the 3 proposed approaches."
+			}
+		},
+		{
+			"title":
+				"A polynomial fitting and k-NN based approach for improving classification of motor imagery BCI data",
+			"year": 2009,
+			"authors": ["Temel Kayikcioglu", "Onder Aydemir"],
+			"url":
+				"http://sci-hub.hk/https://www.sciencedirect.com/science/article/pii/S0167865510001212",
+			"description":
+				"In this study, they present a method to improve the classification of BCI data. In the training procedure, the method utilizes a small portion of the complete training data. Feature vector information is extracted from only one channel. It is a twodimensional vector with a low computational load, whose entities are computed from the coefficients of the second order polynomial fitted to the signals of this channel.",
+			"front_image":
+				"https://www.fabienplisson.com/wp-content/uploads/2017/06/kNN.png",
+			"extra_information": {
+				"title": "",
+				"content":
+					"![knnresults](https://k62.kn3.net/7/4/A/8/C/4/CEB.png)\n\n![comparation](https://k62.kn3.net/6/5/0/3/1/E/524.png)"
+			}
 		}
 	]
 }
