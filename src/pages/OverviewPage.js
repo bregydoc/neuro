@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components';
 
 import brain from '../assets/images/brainb01.png';
 
+import Theme from '../metadata/theme';
+
 const Wrapper = styled.div`
 	display: flex;
 	height: 100%;
@@ -28,7 +30,7 @@ const Question = styled.div`
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 900;
 
-	color: #ffd13c;
+	color: ${Theme.ternaryColor};
 	text-transform: uppercase;
 
 	${props => {
@@ -48,7 +50,7 @@ const Question = styled.div`
 const BodyText = styled.div`
 	font-family: 'Nunito Sans', sans-serif;
 
-	color: #464646;
+	color: ${Theme.ternaryTextColor};
 
 	${props => {
 		if (props.isMobile) {

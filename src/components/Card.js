@@ -12,6 +12,8 @@ import scihubIcon from '../assets/scihub.png';
 import citeIcon from '../assets/cite.png';
 import homeIcon from '../assets/home.png';
 
+import Theme from '../metadata/theme';
+
 const Container = styled.div`	
 	border-radius: 4px;
 	overflow-y: hidden;
@@ -139,7 +141,7 @@ const InfoContainer = styled.div`
 `;
 
 const TypeCard = styled.div`
-	background: #ff5e7a;
+	background: ${Theme.secundaryColor};
 	padding: 10px 30px 10px 30px;
 	max-width: 60px;
 	transform: translateY(-100%);
@@ -168,7 +170,6 @@ const InfoCard = styled.div`
 	flex: 1;
 
 	z-index: 2;
-	background-color: white;
 `;
 
 const TitleInfo = styled.div`
@@ -176,7 +177,7 @@ const TitleInfo = styled.div`
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 20px;
 	font-weight: 600px;
-	color: #3a3a3a;
+	color: ${Theme.primaryTextColor};
 	background-color: white;
 `;
 
@@ -184,7 +185,7 @@ const AuthorInfo = styled.div`
 	padding-top: 10px;
 	font-family: 'Nunito Sans', sans-serif;
 	font-weight: 300px;
-	color: #3a3a3a;
+	color: ${Theme.primaryTextColor};
 	background-color: white;
 	margin-bottom: 20px;
 `;
@@ -192,7 +193,7 @@ const AuthorInfo = styled.div`
 const DescriptionInfo = styled.div`
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 16px;
-	color: #686868;
+	color: ${Theme.secundaryTextColor};
 
 	transition: 0.5s;
 
@@ -213,7 +214,7 @@ const DescriptionInfo = styled.div`
 const QuestionInfo = styled.div`
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 18px;
-	color: #464646;
+	color: ${Theme.ternaryTextColor};
 	font-weight: 800;
 	transition: 0.5s;
 
@@ -265,7 +266,7 @@ const CalendarIcon = styled.img`
 const PublicationDate = styled.div`
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 14px;
-	color: #6e6e6e;
+	color: ${Theme.secundaryTextColor};
 
 	display: flex;
 	align-items: center;
@@ -314,7 +315,7 @@ const AccessLinks = styled.div`
 const MoreInformation = styled.div`
 	padding: 10px;
 	text-align: center;
-	color: #1b1a40;
+	color: ${Theme.accentColor};
 	font-weight: 700;
 	transition: 0.7s;
 	width: auto;

@@ -14,9 +14,11 @@ import ganNormal from '../assets/gan_n.png';
 
 import { Link } from 'react-router-dom';
 
+import Theme from '../metadata/theme';
+
 const Container = styled.div`
 	/* margin-right: 28px; */
-	background-color: #01e19f;
+	background-color: ${Theme.primaryColor};
 
 	${props => {
 		if (props.isMobile) {

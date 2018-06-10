@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
 
 import logoLoading from '../assets/neuro_loader.png';
+
+import Theme from '../metadata/theme';
 const Background = styled.div`
-	background-color: #282632;
+	background-color: ${Theme.extraColor1};
 	position: absolute;
 	top: 0;
 	left: 0;

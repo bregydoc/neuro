@@ -9,6 +9,8 @@ import { Switch, Route, Link } from 'react-router-dom';
 import SotaPage from './SotaPage';
 import OverviewPage from './OverviewPage';
 
+import Theme from '../metadata/theme';
+
 const MainContainer = styled.div`
 	${props => {
 		if (props.isMobile) {
@@ -54,7 +56,7 @@ const ContentTitle = styled.div`
 	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
 	font-size: 21px;
-	color: #686868;
+	color: ${Theme.secundaryTextColor};
 	text-transform: uppercase;
 
 	grid-column-start: 2;
@@ -82,7 +84,7 @@ const NeuroTitle = styled.div`
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 42px;
-	color: #323232;
+	color: ${Theme.primaryTextColor};
 	/* text-align: center; */
 	margin-top: 14px;
 	grid-row: 1 / 2;
@@ -105,13 +107,13 @@ const NeuroTitle = styled.div`
 `;
 
 const SelectorWrapper = styled.div`
-	/* border: 1px solid #ccc; */
+
 	width: 180px;
 	height: 30px;
 	border-radius: 3px;
 	overflow: hidden;
 
-	background-color: #00e1aa
+	background-color: ${Theme.primaryColor}
 	/* text-align: center;
 	vertical-align: middle; */
 	cursor: pointer;
@@ -144,7 +146,7 @@ const SOTASelector = styled.select`
 	text-transform: uppercase;
 	font-weight: 400;
 	font-size: 16px;
-	color: #323232;
+	color: ${Theme.primaryTextColor};
 	/* color: white; */
 
 	text-align: center;
@@ -168,7 +170,7 @@ const ArrowIcon = styled.div`
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: 11px;
-	color: #323232;
+	color: ${Theme.primaryTextColor};
 	vertical-align: middle;
 	margin-top: 6px;
 	margin-right: 8px;
